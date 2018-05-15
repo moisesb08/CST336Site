@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+		h1 {
+			text-transform:uppercase;
+			text-align:center;
+			color: white;
+			font-weight:900;
+			font-size:40px;
+		}
+		
+		#wrapper {
+			margin: 0px auto;
+			border: 1px gray dotted;
+			padding: 30px;
+		}
+		
+		#menuWrapper {
+			text-align:center;
+		}
+		
+		.row0 {
+			background:black;
+			color:white;
+			text-align:center;
+			font-weight: 900;
+		}
+		
+		.row1 {
+			color:cadetblue;
+		}
+		
+		#colA {
+			background:white;
+		}
+		
+		#colB {
+			background:#d9d9d9;
+		}
+		
+		.col1 {
+			background:cadetblue;
+			color:white;
+		}
+		.col2 {
+			background:#568d8f;
+			color:#d9d9d9;
+		}
+		
+		
+		table{
+			margin:0px auto;
+			border-collapse: collapse;
+			border-color:white;
+		}
+		
+		.currentPage {
+			font-weight:600;
+		}
+		
+		html body {
+			background-image:url(images/starry.jpg);
+    		background-size:cover;
+    		background-repeat:no-repeat;
+    		background-position:center center;
+    		font-family:Arial, Helvetica, sans-serif;
+		}
+		
+		.menuItem {
+			color: cadetblue;
+			padding-right:20px;
+		}
+		
+		a {
+			color:cadetblue;
+		}
+		
+		p {
+			color:white;
+		}
+
+	</style>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>quickFacts</title>
+  <meta name="description" content="">
+  <meta name="author" content="Moises">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+  <div id="wrapper">
+  	<h3><a href="../../assignments/assignment1/">CST336 Home Page</a></h3>
+  	<h1>Comparison of Game Engines</h1>
+  	<div id="menuWrapper">
+  	<span class="menuItem"><a href="index.html">Home</a></span>
+  	<span class="menuItem">Unity</span>
+  	<span class="menuItem">Unreal</span>
+  	<span class="currentPage menuItem"><a href="quickFacts.html">Quick Facts</a></span>
+  	</div>
+  	<br>
+  	
+  	<table cellpadding="5" border="1">
+  		<tr class="row0">
+  			<td colspan="2">QUICK FACTS</td>
+  		</tr>
+  		<th class="row1" id="colA">Unity</th><th class="row1" id="colB">Unreal</th>
+  		<tr>
+  			<td class="col1">Uses Java &amp; C#</td>
+  			<td class="col2">Uses C++</td>
+  		</tr>
+  		<tr>
+  			<td class="col1">Better option for mobile game development</td>
+  			<td class="col2">Better option for PC and Consoles</td>
+  		</tr>
+  		<tr>
+  			<td class="col1">Supports 20+ platforms</td>
+  			<td class="col2">Supports 10 platforms</td>
+  		</tr>
+  		<tr>
+  			<td class="col1">No Royalties</td>
+  			<td class="col2">5% Royalties From Sales</td>
+  		</tr>
+  	</table>
+  	<p>Information from <a href="https://program-ace.com/press-room/articles/unity-vs-unreal-engine-4-battle-of-giants">https://program-ace.com/press-room/articles/unity-vs-unreal-engine-4-battle-of-giants</a></p>
+  </div>
+</body>
+</html>

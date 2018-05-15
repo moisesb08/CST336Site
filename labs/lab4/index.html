@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Lab 6</title>
+  <meta name="description" content="">
+  <meta name="author" content="Moises Bernal">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+   <!--*************jQuery MAKE SURE YOU HAVE IT************-->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <style>
+    img {
+    	width: 100px;
+          cursor: pointer;
+    }
+    
+	form {
+		display: inline;
+	}
+
+  	.container {
+		overflow: hidden;
+		background-color: #66c1e5;
+		box-shadow: 0px 2px 4px 0px gray;
+	}
+			
+	.container a {
+	    float: left;
+	    font-size: 15px;
+	    color: white;
+	    text-align: center;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    font-family: inherit;
+	}
+	
+	.dropdown1 {
+	    float: left;
+	    overflow: hidden;
+	}
+	
+	.dropdown2 {
+	    float: left;
+	    overflow:hidden;
+	}
+	
+	.dropdown1 .dropbtn {
+	    font-size: 15px;    
+	    border: none;
+	    outline: none;
+	    color: white;
+	    padding: 12px 16px;
+	    background-color: inherit;
+	    font-family:inherit;
+	}
+	
+	.dropdown2 .dropbtn {
+	    font-size: 15px;    
+	    border: none;
+	    outline: none;
+	    color: white;
+	    padding: 12px 16px;
+	    background-color: inherit;
+	    font-family: inherit;
+	}
+	
+	.container a:hover, .dropdown1:hover .dropbtn {
+	    background-color: skyblue;
+	    color:ghostwhite;
+	}
+	
+	.container a:hover, .dropdown2:hover .dropbtn {
+	    background-color: skyblue;
+	    color:ghostwhite;
+	}
+	
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #a8dcf0;
+	    min-width: 160px;
+	    box-shadow: 0px 4px 8px 0px #262626;
+	    z-index: 1;
+	}
+	
+	.dropdown-content a {
+	    float: none;
+	    color:white;
+	    padding: 12px 16px;
+	    text-decoration: none;
+		display: block;
+	    text-align: left;
+	}
+	
+	.dropdown-content a:hover {
+	    background-color: #262626;
+	    color:white;
+	    font-weight:600;
+	}
+	
+	.dropdown1:hover .dropdown-content {
+	    display: block;
+	}
+	
+	.dropdown2:hover .dropdown-content {
+	    display: block;
+	}
+	
+	.dropdown1:hover .arrow {
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid ghostwhite;
+	}
+	
+	.dropdown2:hover .arrow {
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid ghostwhite;
+	}
+	
+	.arrow {
+		float:right;
+		width:0;
+		height:0;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		border-left: 5px solid white;
+	}
+	
+	.currentPage {
+		background-color:#262626;
+		font-weight:600;
+	}
+  	select {
+  		background-color: black;
+  		color:ghostwhite;
+  		height:20px;
+  		font-size: 14px;
+  		width:150px;
+  	}
+  	.selectFrom {
+  		margin:0;
+  		background-color: black;
+  		color:ghostwhite;
+  		height:20px;
+  		font-size: 14px;
+  		width:100px;
+  	}
+
+  	html body {
+  		font-family:Courier;
+  		background-color:ghostwhite;
+		background-image:url(../../assignments/assignment1/images/pattern1.png);
+		background-repeat:repeat;
+		font-weight:100;
+  	}
+  
+	h1 {
+  		text-align:center;
+  	}
+  	
+  </style>
+</head>
+
+<body>
+  <h1>Lab 4</h1>
+	<div class="container">
+	<a href="../../assignments/assignment1/">Home</a>
+	<a href="../../team_project/">Team Project</a>
+ 
+	<div class="currentPage dropdown1">
+  		<button class="dropbtn" id="buttonLabs">Labs&nbsp;<div class="arrow"></div></button>
+  		<div class="dropdown-content">
+    		<a href="../lab1/">Lab 1</a>
+			<a href="../lab2/">Lab 2</a>
+			<a href="../lab3/">Lab 3</a>
+			<a class="currentPage" href="../lab4/">Lab 4</a>
+			<a href="../lab5/login.php">Lab 5</a>
+  		</div>
+	</div>
+	<div class="dropdown2">
+  		<button class="dropbtn" id="buttonAssignments">Assignments&nbsp;<div class="arrow"></div></button>
+		<div class="dropdown-content">
+			<a href="../../assignments/assignment1/">Assignment 1</a>
+			<a href="../../assignments/assignment2/">Assignment 2</a>
+			<a href="../../assignments/assignment3/">Assignment 3</a>
+			<a href="../../team_project/">Assignment 4</a>
+			<a href="../../assignments/assignment5/">Assignment 5</a>
+		</div>
+  	</div>
+	</div>
+	<br>
+  <div>
+ <!--*************STEP 1 ************-->
+ <h2>Vocabulary Quiz</h2>
+ 
+  <div id="q1">
+      <h3>1. Click on "El Pollo".</h3>  
+      <img id="cat" src="images/cat.png" >
+      <img id="dog" src="images/dog.png" >
+      <img id="chicken" src="images/chicken.png" >
+      <img id="mouse" src="images/mouse.png" >
+  </div>
+  
+ <!--*************STEP 3 ************-->
+  <h3>2. What is cat in Spanish?</h3>
+  <input type="text" id="q2" />
+  
+  <!--*************STEP 4 ************-->
+  <h3>3. What is dog in Spanish?</h3>
+  <input type="radio" name="q3" value="cat"> Gato <br /> 
+  <input type="radio" name="q3" value="dog"> Perro <br />
+  <input type="radio" name="q3" value="chicken"> Pollo <br />
+  <input type="radio" name="q3" value="mouse"> Raton <br />
+  
+  <h3>4. ¿Como se traduce esta pregunta en inglés?</h3>
+  <input type="radio" name="q4" value="0"> Yes, I understand Spanish. <br /> 
+  <input type="radio" name="q4" value="1"> How is this question translated to English? <br />
+  <input type="radio" name="q4" value="0"> I do speak English. <br />
+  <input type="radio" name="q4" value="0"> I do not speak English. <br />
+  
+  <h3>5. What are the numbers 1-5 in Spanish (ascending order)?</h3>
+  <select id="q5">
+  	<option value="" disabled selected>Select:</option>
+  	<option value="0">Tres, Uno, Cuatro, Seis, Cinco</option>
+	<option value="0">Uno, Dos, Seis, Cuarto, Sinco</option>
+	<option value="0">Uno, Tres, Cuatro, Dos, Sinco</option>
+	<option value="1">Uno, Dos, Tres, Cuatro, Cinco</option>
+  </select>
+  <br /><br />
+ <!--*************STEP 5 ************-->
+  <input type="button" value="Submit Quiz!" id="submitQuiz" />
+  
+  
+  <h2 id="grade"> </h2>
+   
+  
+  </div>
+  
+  <script>
+      var answer1;
+      $("#q1 img").mouseenter( function(){    $(this).css("width","125px")     }  );
+      
+      $("#q1 img").mouseleave( function(){    $(this).css("width","100px")     }  );
+      
+      $("#q1 img").click( function(){
+          
+          $("#q1 img").css("border","");    
+          $(this).css("border","5px solid green")
+          //alert( $(this).attr("id") );
+          answer1 = $(this).attr("id");
+               
+       });
+      
+      $("#submitQuiz").click( function(){
+          var grade = 0;
+          
+          if (answer1 == "chicken") {
+              grade = 20;
+          }
+          
+          var answer2 = $("#q2").val().toUpperCase();
+          if (answer2 == "GATO") {
+              grade += 20;
+          }
+          
+          var answer3 = $('input:radio[name=q3]:checked').val();
+          if (answer3 == "dog") {
+               grade += 20;
+          }
+          
+          var answer4 = $('input:radio[name=q4]:checked').val();
+          if (answer4 == "1") {
+               grade += 20;
+          }
+          
+          var answer5 = document.getElementById('q5').value;
+          if (answer5 == "1") {
+               grade += 20;
+          }
+          
+          $("#grade").html("Grade: "  + grade);
+                  
+      }  );
+      
+  
+      
+  </script>
+  
+</body>
+</html>
