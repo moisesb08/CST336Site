@@ -4,7 +4,7 @@
 	{
 		global $dbConn;
 		$sql = "SELECT gameID, title, imageUrl
-				FROM game";
+				FROM GAME";
 		$stmt = $dbConn -> prepare($sql);
 		$stmt -> execute();
 		$records = $stmt -> fetchAll();
@@ -90,7 +90,6 @@
 	
 </div>
   <div>
- <!--*********STEP 1********* -->
    <h1> XBOX ONE Video Game Library</h1>
    <p><center>Hover over an image to learn more.</center></p>
 	<hr>
@@ -125,8 +124,7 @@
               }
          });
   		})
-  		
-       <!--*********STEP 2********* -->
+
          $("#zipCode").change(  function(){ 
              //alert(  $("#zipCode").val()      );
          

@@ -1,4 +1,5 @@
 <?php
+header("Location: ../../assignments/assignment1/"); 
 session_start();
 $_SESSION['login'] = "true";
 ?>
